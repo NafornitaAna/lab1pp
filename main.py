@@ -6,6 +6,8 @@ def main():
     for ch in ".,?!;:":
         text = text.replace(ch,"")
 
+    text=text.lower()
+
     print(text)
 
 
