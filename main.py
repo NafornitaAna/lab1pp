@@ -1,3 +1,6 @@
+import re
+
+
 def main():
     file = open("input text",'r')
     text = file.read()
@@ -8,8 +11,13 @@ def main():
 
     text=text.lower()
 
-    print(text)
 
+    cuvinte=re.split(" |\n", text)
+    cuvinte=list(filter(lambda cuvant: len(cuvant)>6,cuvinte))
+
+    text= " ".join(cuvinte)
+
+    print(text)
 
 if __name__ == '__main__':
     main()
